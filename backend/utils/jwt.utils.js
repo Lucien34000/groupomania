@@ -19,7 +19,7 @@ module.exports = {
     return (authorization != null) ? authorization.replace('Bearer ', '') : null;
   },
   getUserId: function(authorization) {
-    const userId = -1;
+    let userId = -1;
     const token = module.exports.parseAuthorization(authorization);
     if(token != null) {
       try {
